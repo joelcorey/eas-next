@@ -1,19 +1,21 @@
 import { useStore } from 'effector-react';
 import { $appSettings } from '../store/AppSettings'
-
+import Image
+ from 'next/image';
 export default function ImageCard(props) {
   const appSettings = useStore($appSettings)
 
   const { title, img } = props
 
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      backgroundColor: 'red',
-      width: '25vw'
-    }}>
+    <div
+			className='
+				flex
+				flex-col
+				justify-center
+				w-3/12
+			'
+		>
       <div style={{
         alignSelf: 'center',
         height : '4vh',
@@ -24,13 +26,23 @@ export default function ImageCard(props) {
       <div style={{
         alignSelf: 'center',
       }}>
-        <img
-          src={appSettings[img]}
-          alt="something"
-          style={{
-            maxWidth : '20vw'
-          }}
-        />
+				{
+					appSettings[img] &&
+					<div
+						className={`
+							relative
+							w-48
+							h-48
+						`}
+					>
+						<Image
+							src={`${appSettings[img]}`}
+							alt='something'
+							layout='fill'
+						/>
+					</div>
+				}
+
       </div>
     </div>
   );
