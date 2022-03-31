@@ -5,9 +5,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-import ImageCardContainer from '../components/imageCardContainer'
-// import Header from '../components/Header';
 import HeaderSimple from '../components/HeaderSimple';
+import ImageCardContainer from '../components/ImageCardContainer'
+import IdxSearchbar from '../components/IdxSearchbar';
+import BlogCardContainer from '../components/BlogCardContainer';
 
 export default function Home() {
 
@@ -19,6 +20,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+
 			<HeaderSimple
         pathKeys={{
           title            : 'settingsTitle',
@@ -27,6 +29,31 @@ export default function Home() {
           agentVideo       : 'settingsAgentVideo'
         }}
       />
+
+			<IdxSearchbar />
+
+			<BlogCardContainer
+				pathKeys={{
+					title      : 'blogTitle',
+					subTitle   : 'blogSubTitle',
+					buttonText : 'blogBtnText',
+					blogData   : [
+						{
+							title         : 'Recent Blog 1',
+							previewText   : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+						},
+						{
+							title         : 'Recent Blog 2',
+							previewText   : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+						},
+						{
+							title         : 'Recent Blog 3',
+							previewText   : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+						},
+					]
+				}}
+			/>
+
       <ImageCardContainer
         pathKeys={[
           {
@@ -43,6 +70,7 @@ export default function Home() {
           },
         ]}
       />
+
     </div>
   )
 }
