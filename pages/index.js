@@ -6,6 +6,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import ImageCardContainer from '../components/imageCardContainer'
+// import Header from '../components/Header';
+import HeaderSimple from '../components/HeaderSimple';
 
 export default function Home() {
 
@@ -17,6 +19,14 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+			<HeaderSimple
+        pathKeys={{
+          title            : 'settingsTitle',
+          subTitle         : 'settingsSubTitle',
+          backgroundImage  : 'settingsMediaPrimaryImage',
+          agentVideo       : 'settingsAgentVideo'
+        }}
+      />
       <ImageCardContainer
         pathKeys={[
           {

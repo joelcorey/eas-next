@@ -1,7 +1,7 @@
 import { useStore } from 'effector-react';
 import { $appSettings } from '../store/AppSettings'
-import Image
- from 'next/image';
+import Image from 'next/image';
+
 export default function ImageCard(props) {
   const appSettings = useStore($appSettings)
 
@@ -39,6 +39,7 @@ export default function ImageCard(props) {
 							src={`${appSettings[img]}`}
 							alt='something'
 							layout='fill'
+							placeholder='empty'
 						/>
 					</div>
 				}
