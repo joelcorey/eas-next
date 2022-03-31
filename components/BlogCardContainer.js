@@ -15,11 +15,20 @@ export default function BlogCardContainer(props) {
 		flex-col
 		justify-evenly
 		mx-auto
-		my-10
+		mb-20
 		h-32
 		flex-none
 	'>
-		<div>{appSettings[title]}</div>
+		<div className='
+			flex
+			flex-row
+			mx-auto
+			text-xl
+			mb-4
+		'
+		>
+			{appSettings[title]}
+		</div>
 		<div className='
 			flex
 			flex-row
