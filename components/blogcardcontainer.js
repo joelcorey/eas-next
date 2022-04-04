@@ -1,6 +1,6 @@
 import { useStore } from 'effector-react';
 import { $appSettings } from '../store/AppSettings'
-import BlogCard from './BlogCard';
+import BlogCard from './blogcard';
 
 export default function BlogCardContainer(props) {
 	const appSettings = useStore($appSettings)
@@ -10,30 +10,24 @@ export default function BlogCardContainer(props) {
 
   return (
 	<div className='
-		flex
-		shrink-0
-		flex-col
-		justify-evenly
-		mx-auto
+		flex flex-col justify-evenly
 		mb-20
-		h-32
-		flex-none
+		h-auto
+		w-full
 	'>
 		<div className='
-			flex
-			flex-row
-			mx-auto
-			text-xl
+			flex flex-row justify-center mb-2
 			mb-4
+			text-xl
 		'
 		>
 			{appSettings[title]}
 		</div>
 		<div className='
-			flex
-			flex-row
-			justify-evenly
-
+			flex flex-col
+			items-center
+			md:flex-row
+			md:justify-evenly
 		'>
 			{blogData.map(({ title, previewText }, index) => {
 				return (
@@ -44,6 +38,13 @@ export default function BlogCardContainer(props) {
 					/>
 				)
 			})}
+		</div>
+		<div className='
+			flex flex-col
+			mb-4
+			text-xl
+		'>
+			<button>{appSettings[buttonText]}</button>
 		</div>
 	</div>
   );

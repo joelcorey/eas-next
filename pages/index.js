@@ -5,10 +5,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-import HeaderSimple from '../components/HeaderSimple';
-import ImageCardContainer from '../components/ImageCardContainer'
-import IdxSearchbar from '../components/IdxSearchbar';
-import BlogCardContainer from '../components/BlogCardContainer';
+import HeaderSimple from '../components/headersimple';
+import ImageCardContainer from '../components/imagecardcontainer'
+import IdxSearchbar from '../components/idxsearchbar';
+import BlogCardContainer from '../components/blogcardcontainer';
 
 export default function Home() {
 
@@ -31,7 +31,6 @@ export default function Home() {
       />
 
 			<IdxSearchbar />
-
 			<BlogCardContainer
 				pathKeys={{
 					title      : 'blogTitle',

@@ -10,18 +10,17 @@ export default function ImageCard({ title, previewText }) {
 			className='
 				flex
 				flex-col
-				justify-center
-				w-3/12
+				justify-around
+				w-full
 				bg-gray
 				text-white
-				p-2
+				p-8
+				m-2
 			'
 		>
-      <div style={{
-        alignSelf: 'center',
-        height : '4vh',
-        fontSize: '18px'
-      }}>
+      <div className='
+				flex flex-row justify-center mb-2
+			'>
         {title}
       </div>
       <div style={{

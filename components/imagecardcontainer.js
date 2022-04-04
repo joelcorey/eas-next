@@ -1,4 +1,4 @@
-import ImageCard from './ImageCard';
+import ImageCard from './imagecard';
 
 export default function ImageCardContainer(props) {
 	const { pathKeys } = props
