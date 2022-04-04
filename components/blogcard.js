@@ -16,16 +16,15 @@ export default function ImageCard({ title, previewText }) {
 				text-white
 				p-8
 				m-2
-			'
-		>
+			'>
       <div className='
 				flex flex-row justify-center mb-2
 			'>
         {title}
       </div>
-      <div style={{
-        alignSelf: 'center',
-      }}>
+      <div className='
+				flex flex-row justify-center mb-2
+			'>
 				{previewText}
 
       </div>

@@ -1,18 +1,13 @@
 import ImageCard from './imagecard';
 
-export default function ImageCardContainer(props) {
-	const { pathKeys } = props
+export default function ImageCardContainer({ pathKeys}) {
 
   return (
 	<div className='
-		flex
-		shrink-0
-		sm:flex-col
+		flex flex-col
+		items-center
 		md:flex-row
-		justify-evenly
-		mx-auto
-		h-1/3
-		flex-none
+		md:justify-evenly
 	'>
 		{pathKeys.map((pathKey, index) => {
 			return (

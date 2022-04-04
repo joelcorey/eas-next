@@ -2,10 +2,9 @@ import { useStore } from 'effector-react';
 import { $appSettings } from '../store/AppSettings'
 import BlogCard from './blogcard';
 
-export default function BlogCardContainer(props) {
+export default function BlogCardContainer({ pathKeys }) {
 	const appSettings = useStore($appSettings)
 
-	const { pathKeys } = props
 	const { title, subTitle, buttonText, blogData } = pathKeys
 
   return (

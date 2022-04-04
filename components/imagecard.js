@@ -2,30 +2,28 @@ import { useStore } from 'effector-react';
 import { $appSettings } from '../store/AppSettings'
 import Image from 'next/image';
 
-export default function ImageCard(props) {
+export default function ImageCard({ title, img }) {
   const appSettings = useStore($appSettings)
-
-  const { title, img } = props
 
   return (
     <div
 			className='
 				flex
 				flex-col
-				justify-center
-				w-3/12
+				justify-around
+				w-full
+				p-8
+				m-2
 			'
 		>
-      <div style={{
-        alignSelf: 'center',
-        height : '4vh',
-        fontSize: '18px'
-      }}>
+      <div className='
+				flex flex-row justify-center mb-2 text-lg
+			'>
         {appSettings[title]}
       </div>
-      <div style={{
-        alignSelf: 'center',
-      }}>
+      <div className='
+				flex flex-row justify-center mb-2
+			'>
 				{
 					appSettings[img] &&
 					<div
