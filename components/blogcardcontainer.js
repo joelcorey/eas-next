@@ -38,12 +38,21 @@ export default function BlogCardContainer({ pathKeys }) {
 				)
 			})}
 		</div>
-		<div className='
-			flex flex-col
-			mb-4
-			text-xl
-		'>
-			<button>{appSettings[buttonText]}</button>
+		 <div className='
+				flex flex-row justify-center
+			'>
+			<button className='
+				w-1/2
+				bg-blue-500
+				text-white
+				px-32
+				py-3
+				rounded-sm
+				text-1xl
+				font-medium
+				hover:bg-blue-700
+				transition duration-300
+			'>{appSettings[buttonText]}</button>
 		</div>
 	</div>
   );

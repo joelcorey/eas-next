@@ -6,7 +6,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import HeaderSimple from '../components/headersimple';
-import ImageCardContainer from '../components/imagecardcontainer'
+import CardContainer from '../components/cardcontainer'
 import IdxSearchbar from '../components/idxsearchbar';
 import BlogCardContainer from '../components/blogcardcontainer';
 
@@ -53,19 +53,25 @@ export default function Home() {
 				}}
 			/>
 
-      <ImageCardContainer
+      <CardContainer
         pathKeys={[
           {
-            title : 'eap_01_circle_title',
-            img   : 'eap_01_circle_image',
+            title  : 'eap_01_circle_title',
+            img    : 'eap_01_circle_image',
+						text   : 'eap_01_circle_text',
+						button : 'eap_01_circle_button',
           },
           {
-            title : 'eap_02_circle_title',
-            img   : 'eap_02_circle_image',
+            title  : 'eap_02_circle_title',
+            img    : 'eap_02_circle_image',
+						text   : 'eap_02_circle_text',
+						button : 'eap_01_circle_button',
           },
           {
-            title : 'eap_03_circle_title',
-            img   : 'eap_03_circle_image',
+            title  : 'eap_03_circle_title',
+            img    : 'eap_03_circle_image',
+						text   : 'eap_03_circle_text',
+						button : 'eap_01_circle_button',
           },
         ]}
       />

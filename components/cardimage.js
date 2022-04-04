@@ -2,7 +2,7 @@ import { useStore } from 'effector-react';
 import { $appSettings } from '../store/AppSettings'
 import Image from 'next/image';
 
-export default function ImageCard({ title, img }) {
+export default function CardImage({ title, img }) {
   const appSettings = useStore($appSettings)
 
   return (
@@ -10,19 +10,19 @@ export default function ImageCard({ title, img }) {
 			className='
 				flex
 				flex-col
-				justify-around
+				justify-center
+				align-center
 				w-full
 				p-8
-				m-2
 			'
 		>
       <div className='
-				flex flex-row justify-center mb-2 text-lg
+				flex flex-row justify-center my-2 text-lg
 			'>
         {appSettings[title]}
       </div>
       <div className='
-				flex flex-row justify-center mb-2
+				flex flex-row justify-center
 			'>
 				{
 					appSettings[img] &&

@@ -26,7 +26,6 @@ export default function ImageCard({ title, previewText }) {
 				flex flex-row justify-center mb-2
 			'>
 				{previewText}
-
       </div>
     </div>
   );
